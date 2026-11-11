@@ -29,7 +29,7 @@ python -m unittest
 
 ## Team
 
-- Tejas Elluri (building BudgetBuddy)
+- Tejas Elluri (solo founder, building BudgetBuddy)
 
 ## Where to start
 
