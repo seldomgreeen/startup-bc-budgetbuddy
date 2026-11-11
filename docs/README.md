@@ -38,3 +38,9 @@ python -m unittest
 Pick a ticket from the `tickets/` folder (or the Issues tab once your section
 repo exists). Read `CONTRIBUTING.md` for the Definition of Done every pull
 request has to meet.
+
+## Big-expense warnings
+
+`features.core.big_expenses(transactions, threshold)` returns expenses at or above
+a positive dollar threshold, excluding income. See `tickets/ticket-01-big-expenses.md`.
+This is a helper for a warning view; the terminal menu has not gained a new option.
