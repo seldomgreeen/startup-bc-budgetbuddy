@@ -34,7 +34,7 @@ def count_by_category(transactions):
 
 
 def last_transaction(transactions):
-    return transactions[len(transactions)]
+    return transactions[len(transactions) - 1]
 
 
 def total_spent(transactions):
