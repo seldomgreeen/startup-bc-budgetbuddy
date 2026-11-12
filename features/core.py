@@ -44,4 +44,4 @@ def total_spent(transactions):
 def average_transaction(transactions):
     if not transactions:
         return 0
-    return round(sum(t["amount"] for t in transactions) / (len(transactions) - 1), 2)
+    return round(sum(t["amount"] for t in transactions) / len(transactions), 2)
