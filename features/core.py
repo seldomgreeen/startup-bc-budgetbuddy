@@ -28,7 +28,7 @@ def transactions_by_category(transactions, category):
 def count_by_category(transactions):
     counts = {}
     for t in transactions:
-        name = t["catagory"]
+        name = t["category"]
         counts[name] = counts.get(name, 0) + 1
     return counts
 
