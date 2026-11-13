@@ -44,3 +44,9 @@ request has to meet.
 `features.core.big_expenses(transactions, threshold)` returns expenses at or above
 a positive dollar threshold, excluding income. See `tickets/ticket-01-big-expenses.md`.
 This is a helper for a warning view; the terminal menu has not gained a new option.
+
+## Average balance history
+
+`features.reports.average_balance({"history": [...]})` returns the average
+historical balance rounded to one decimal, or `0.0` for an empty history.
+The finished helper from the Lesson 12 seed is included with its tests.
