@@ -1,7 +1,6 @@
 """Reporting helpers for BudgetBuddy.
 
-Heads up: this module is half-built on purpose. `account_summary` works, but
-`category_report` is still a stub with a clear seam to finish (see the tickets).
+Account summaries, signed category totals, and average balance history.
 """
 
 
@@ -10,9 +9,11 @@ def account_summary(data):
 
 
 def category_report(data):
-    # TODO(ticket): tally each transaction into a {category: total amount} dict and return it.
-    # For now this returns an empty report so the menu never crashes.
+    """Return the signed total transaction amount for each category."""
     report = {}
+    for transaction in data["transactions"]:
+        category = transaction["category"]
+        report[category] = report.get(category, 0) + transaction["amount"]
     return report
 
 
