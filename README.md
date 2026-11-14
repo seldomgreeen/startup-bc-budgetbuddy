@@ -1,62 +1,46 @@
 # BudgetBuddy
 
-A small spending and allowance tracker you run in the terminal. Add
-transactions, list them, and see your balance.
+A spending and allowance tracker you run in the terminal.
 
-This is your squad's starting product for **Elite 101**. It already runs. Your
-job over the term is to grow it one ticket at a time, the way a real software
-team does.
+Solo founder: **Tejas Elluri**.
 
-## Run it
+## Run
 
-```bash
-python main.py
-```
-
-## Run the tests
+From the repository root, with Python 3 installed:
 
 ```bash
-python -m unittest
+python3 main.py
 ```
 
-Both commands work from the root of this repo with no setup and no installs.
+The menu shows your balance, lists and adds transactions, filters by category,
+and displays category counts, spending statistics, and an account summary.
+Transactions are stored in `data/budgetbuddy.json`.
 
-## Where the work comes from
+## Test
 
-Every change you make starts from a ticket. There are two places to read them,
-and they say the same thing:
+```bash
+python3 -m unittest
+```
 
-- **`tickets/`** - the eight tickets as files in this repo. Start here if you
-  just cloned it.
-- **The Issues tab** - the same eight tickets, on GitHub, where your squad
-  claims them and links them to pull requests.
+No third-party Python packages are needed. On systems where `python` means
+Python 3, it can be used instead of `python3`.
 
-Each ticket names a difficulty (S or M), what "done" looks like as a checklist,
-and a Notes line telling you which files it touches.
+## Added helpers
 
-## What is in here
+- Find expenses meeting a positive dollar threshold.
+- Total signed transaction amounts by category.
+- Average the saved balance history, including an empty history.
 
-| Path | What it does |
-|---|---|
-| `main.py` | The menu loop you interact with |
-| `storage.py` | Loads and saves the JSON data file |
-| `features/core.py` | The transactions, the balance, and small helpers |
-| `features/reports.py` | Summary reports (half-built on purpose - you finish it via a ticket) |
-| `data/budgetbuddy.json` | The transaction history and starting balance |
-| `tests/test_core.py` | Example tests to copy from |
-| `tickets/` | The eight tickets your squad works through |
-| `docs/README.md` | The product guide, plus the Team list you add yourself to |
-| `CONTRIBUTING.md` | The Definition of Done and the branch naming rules |
+These helpers are callable from Python; they do not add new menu options.
+See [the product guide](docs/README.md) for examples and the solo demo plan.
 
-## Before you open your first pull request
+## Project files
 
-Read **[CONTRIBUTING.md](CONTRIBUTING.md)**. A pull request is done only when
-all five are true: the ticket is linked, it runs, a squadmate reviewed it, a
-test covers it, and the docs reflect the change. Never commit straight to
-`main` - it is what a new teammate clones and what the demo runs from.
+- `main.py`: terminal menu.
+- `features/core.py`: transaction and spending helpers.
+- `features/reports.py`: account, category-total, and history reports.
+- `storage.py`: JSON loading and saving.
+- `tests/`: unit tests and ticket acceptance checks.
+- `tickets/`: starter task descriptions and acceptance criteria.
 
-## Next steps
-
-1. Read **[docs/README.md](docs/README.md)** and add yourself to the Team list.
-2. Pick a ticket from `tickets/` or the Issues tab.
-3. Branch, build, test, open the pull request.
+See [release notes](docs/RELEASE_NOTES.md) and [contributing](CONTRIBUTING.md).
